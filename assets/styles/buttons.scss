@@ -1,0 +1,134 @@
+button {
+    font-family: InterMedium;
+    background: none;
+    border: none;
+    &.btn {
+        width: 100%;
+        padding: 18px 0;
+        border-radius: 16px;
+    }
+    &:focus {
+        box-shadow: none !important;
+    }
+    &.--orange {
+        color: $white;
+        background-color: $orange;
+    }
+    &.--light {
+        background-color: $light-gray;
+    }
+    &.--next {
+        width: 100%;
+        max-width: 325px;
+    }
+    &.--outline_orange {
+        border: 1px solid $orange;
+        color: $orange;
+    }
+    &:disabled {
+        opacity: .3 !important;
+    }
+}
+
+.btn-link {
+    width: fit-content;
+    border-radius: 34px;
+    font-family: InterMedium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include adaptiv-font(16, 14);
+    text-decoration: none;
+    &.--light {
+        color: #fff;
+        img {
+            margin-right: 11px;
+        }
+    }
+    &.--blue {
+        color: $blue;
+        img {
+            margin-left: 14px;
+        }
+    }
+    &.--dark_grey {
+        background-color: $dark-gray;
+    }
+}
+
+.select-button {
+    input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            background-color: #F4F4F4;
+            border: 2px solid transparent;
+            border-radius: 0.25em;
+            margin-right: 0.5em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+          top: 0;
+        }
+        &:hover {
+            &::before {
+                border-color: #b3d7ff;
+            }
+        }
+    }
+    &.--radio {
+        label {
+            &::before {
+                border-radius: 50%;
+            }
+        }
+        input:checked+label {
+            &:before {
+                border: none;
+                opacity: 1 !important;
+                background: url('@/static/icons/checked-radio.svg');
+            }
+        }
+    }
+    &.--checkbox {
+        label {
+            &::before {
+                border-radius: 6px;
+            }
+        }
+        input:checked+label {
+            &::before {
+                border: none;
+                opacity: 1 !important;
+                background: url('@/static/icons/Checkbox.svg');
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    button {
+        &.--orange {
+            &:hover {
+                color: #fff;
+            }
+        }
+        &.--light {
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}

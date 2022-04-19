@@ -1,0 +1,38 @@
+
+// MARGIN
+// mt-10 -> margin top 10px
+// mb-10 -> margin bottom 10px
+// ml-10 -> margin left 10px
+// mr-10 -> margin right 10px
+
+.m {
+
+  // TOP
+  @for $value from 0 through 100 {
+    &t-#{$value} {
+      margin-top: $value + px;
+    }
+  }
+
+  // BOTTOM
+  @for $value from 0 through 100 {
+    &b-#{$value} {
+      margin-bottom: $value + px;
+    }
+  }
+
+  // LEFT
+  @for $value from 0 through 100 {
+    &l-#{$value} {
+      margin-left: $value + px;
+    }
+  }
+
+  // RIGHT
+  @for $value from 0 through 100 {
+    &r-#{$value} {
+      margin-right: $value + px;
+    }
+  }
+
+}

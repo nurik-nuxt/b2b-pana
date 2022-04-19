@@ -1,0 +1,216 @@
+.default-card {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    p:not(.--title) {
+        margin-bottom: 8px;
+    }
+    &_block {
+        margin-bottom: 16px;
+        background-color: #fff;
+        &.mb {
+            margin-bottom: 24px;
+        }
+    }
+    .w-100 {
+        input {
+            width: 100%;
+        }
+    }
+    .title {
+        margin-bottom: 24px;
+        &.flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+    &_content {
+        margin-bottom: 24px;
+    }
+    &.--adding_hotel {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 2rem;
+        .btn-link {
+            img {
+                margin-left: 14px;
+            }
+        }
+    }
+    .select-options {
+        margin-top: 12px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        .v-select {
+            width: 100%;
+        }
+    }
+    &.finish {
+        .switch-steps {
+            .btn {
+                &.--orange {
+                    padding: 18px 58px;
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+    &.--bg-light-green {
+        background-color: #F1FEF2;
+    }
+}
+
+.--adding-photo {
+    text-align: center;
+    padding: 0;
+    &_content {
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 78px 0px;
+        p {
+            margin-bottom: 18px !important;
+        }
+        button {
+            margin: 0 auto;
+        }
+    }
+    .added-photos {
+        border-top: 1px solid $medium-gray;
+        padding: 44px 24px 24px;
+    }
+}
+
+.--row {
+    &-item {
+        margin-bottom: 16px;
+    }
+}
+
+.switch-steps {
+    display: flex;
+    margin-top: 2rem;
+    button {
+        width: fit-content;
+        &.--outline_orange {
+            padding: 18px 40px;
+            margin-right: 12px;
+        }
+        &.--orange {
+            padding: 18px 115px;
+        }
+    }
+}
+
+// layout-prices
+.info-page {
+    margin-bottom: 24px;
+}
+
+.card-content {
+    .list {
+        padding: 0;
+        margin-top: 26px;
+        display: grid;
+        grid-gap: 24px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        li {
+            list-style-type: none;
+        }
+    }
+    &.textfleld {
+        margin: 2rem 0;
+    }
+    &.facilities {
+        margin-bottom: 50px;
+    }
+}
+
+.card-row {
+    background-color: #fff;
+    border-radius: 24px;
+    &_img {
+        img {
+            width: 100%;
+            border-radius: 24px 0px 0px 24px;
+        }
+    }
+    &_header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-bottom: 1px solid $light-gray;
+        padding: 0 16px 16px 24px;
+        margin-bottom: 16px;
+        .left-block {
+            display: flex;
+            align-items: flex-start;
+            .price {
+                background-color: $light-blue;
+                color: $blue;
+                padding: 4px 12px;
+                border-radius: 8px;
+                margin-left: 1rem;
+            }
+            .text {
+                margin-bottom: 5px;
+            }
+        }
+        .utils {
+            display: flex;
+            align-items: center;
+            button {
+                margin: 0 6px;
+                border: none;
+                border-radius: 12px;
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.bg-light-orange {
+                    background-color: rgba(255, 59, 48, 0.12);
+                }
+                &.bg-silver {
+                    background-color: #F4F4F4;
+                }
+            }
+        }
+    }
+    &_body {
+        padding: 16px 0px 16px;
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            span {
+                background: $light-gray;
+                border-radius: 12px;
+                margin: 0 8px 8px 0;
+                padding: 12px 32px;
+                cursor: pointer;
+                border: .5px solid transparent;
+                transition: all .3s ease;
+                &:hover {
+                    background: #f0f0f0;
+                    border-color: #dadada;
+                }
+            }
+        }
+    }
+    &.--adding_hotel {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 2rem;
+        .btn-link {
+            img {
+                margin-left: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.form {
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+    &-title {
+        font-weight: 600;
+        @include adaptiv-font(20, 16);
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #111111;
+        font-family: InterBold;
+    }
+    &-descr {
+        @include adaptiv-font(16, 14);
+    }
+    &-step {
+        margin-bottom: 16px;
+        p {
+            color: $silver;
+            font-family: InterRegular;
+        }
+    }
+    &-body {
+        margin-bottom: 24px;
+    }
+    &-footer {
+        width: 100%;
+        &.d-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn {
+                flex: 0 0 48%;
+            }
+        }
+    }
+    &-util {
+        p {
+            line-height: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .form {
+        &-footer {
+            text-align: center;
+            &.d-flex {
+                display: flex;
+                flex-direction: column-reverse;
+                .btn {
+                    flex: 0 0 48%;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}

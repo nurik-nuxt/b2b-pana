@@ -1,0 +1,54 @@
+// for loading directive
+.loader {
+  $border-size: 7px;
+  $loader-size: 35px;
+  $border-size--mini: 4px;
+  $loader-size--mini: 25px;
+
+  background: rgba(255, 255, 255, .8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    display: block;
+    content: "";
+    height: $loader-size;
+    width: $loader-size;
+    //background: black;
+    border: $border-size solid transparent;
+    border-radius: 50%;
+    border-top: $border-size solid $color__orange;
+    border-bottom: $border-size solid $color__orange;
+    -webkit-animation: spin 1.5s ease infinite; /* Safari */
+    animation: spin 1.5s ease infinite;
+  }
+
+  // mini loader
+  &--mini {
+    &::after {
+      height: $loader-size--mini;
+      width: $loader-size--mini;
+      border: $border-size--mini solid transparent;
+      border-top: $border-size--mini solid $color__orange;
+      border-bottom: $border-size--mini solid $color__orange;
+    }
+  }
+
+
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

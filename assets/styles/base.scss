@@ -1,0 +1,38 @@
+body {
+    background-color: #f1f3f7;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: InterRegular;
+}
+input, button {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+a {
+  color: $color__font-link;
+}
+
+.disabled {
+  opacity: .5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.only-mobile {
+  // show only on mobile
+  @media (min-width: $break-point__mobile) {
+    display: none;
+  }
+}
+.only-desktop {
+  // show only on desktop
+  @media (max-width: $break-point__mobile) {
+    display: none;
+  }
+}

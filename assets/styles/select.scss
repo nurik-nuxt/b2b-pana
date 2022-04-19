@@ -1,0 +1,29 @@
+.default-select .vs__search::placeholder,
+.default-select .vs__dropdown-toggle,
+.default-select .vs__dropdown-menu {
+    background: #F5F5F5;
+    border: none;
+    color: #394066;
+}
+
+.vs__dropdown-toggle {
+    padding: 7px 12px 13px !important;
+}
+
+// .vs__selected-options {
+//     max-width: 80%;
+//     overflow: hidden;
+//     flex-wrap: nowrap !important;
+// }
+// .vs__selected {
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+// }
+.vs__clear {
+    display: none;
+}
+
+.default-select .vs__clear,
+.default-select .vs__open-indicator {
+    fill: #000;
+}
